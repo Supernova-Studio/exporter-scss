@@ -1,21 +1,22 @@
 {
-    "id": "io.supernova.sass",
-    "name": "SASS",
-    "description": "SASS token and style exporter",
-    "author": "Jiri Trecak",
+    "id": "io.supernova.scss",
+    "name": "SCSS",
+    "description": "SCSS token and style exporter",
+    "author": "Ivan Terpugov & Jiri Trecak",
     "organization": "Supernova",
     "source_dir": "src",
     "version": "1.0.0",
     "config": {
         "sources": "sources.json",
-        "output": "output.json"
+        "output": "output.json",
+        "js": "src/js/helpers.js"
     },
     "engines": {
         "pulsar": "1.0.0",
         "supernova": "1.0.0"
     },
     "tags": [
-        "SASS",
+        "SCSS",
         "Tokens",
         "Styles"
     ]
