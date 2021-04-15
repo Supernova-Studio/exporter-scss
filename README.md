@@ -4,10 +4,10 @@
 [Supernova](https://supernova.io) is a design system platform that allows you to seamlessly translate your design system data to production-ready code. Supernova works with any platform or tech stack, is used by many developers and organizations around the world, and can help you save time by replacing manual and repetitive tasks that all developers hate. To learn everything Supernova, please check out our [developer documentation](https://developers.supernova.io/).
 
 
-# SASS Exporter
+# SCSS Exporter
 
 
-The SASS Exporter allows you to **produce production-ready code for all product styles (such as colors) defined inside your design system** in such a way that you can immediately use them to style your application elements. Specifically, this exporter automates the coding of:
+The SCSS Exporter allows you to **produce production-ready code for all product styles (such as colors) defined inside your design system** in such a way that you can immediately use them to style your application elements. Specifically, this exporter automates the coding of:
 
 - [x] Color definitions
 - [x] Text Styles
@@ -20,28 +20,22 @@ You can generate all production ready-code either manually using Supernova's [VS
 
 ## Example Usage
 
-Once you have run the exporter against your design system, you can start using the code in your codebase right away. Here are a few examples of how you can use the output of the SASS exporter:
+Once you have run the exporter against your design system, you can start using the code in your codebase right away. Here are a few examples of how you can use the output of the SCSS exporter:
 
 ### [Example 1]
 
-[Todo description]
+Import `index.scss` file to your project and use generated styles
 
 ```
-[Code]
+.yourClass {
+    color: $yourToken;
+}
 ```
 
-
-### [Example 2]
-
-[Todo description]
-
-```
-Code
-```
 
 ## Installing
 
-In order to make the Supernova SASS exporter available for your organization so you can start generating code from your design system, please follow the installation guide in our [developer documentation](https://developers.supernova.io/using-exporters/installing-exporters).
+In order to make the Supernova SCSS exporter available for your organization so you can start generating code from your design system, please follow the installation guide in our [developer documentation](https://developers.supernova.io/using-exporters/installing-exporters).
 
 ## Reporting Bugs or Requesting Features
 
@@ -79,7 +73,7 @@ We are developing and maintaining exporters for many major technologies. Here ar
 - [Typescript Exporter](https://github.com/Supernova-Studio/exporter-typescript)
 - [CSS Exporter](https://github.com/Supernova-Studio/exporter-css)
 - [LESS Exporter](https://github.com/Supernova-Studio/exporter-less)
-- [SASS Exporter](https://github.com/Supernova-Studio/exporter-sass)
+- [SCSS Exporter](https://github.com/Supernova-Studio/exporter-scss)
 
 
 Additionally, we are also developing and maintaining exporters for specific use cases:
