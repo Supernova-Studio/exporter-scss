@@ -5,7 +5,7 @@ Tokens are named by their group path and then name,
 and their value rendered using `rendered-color` blueprint
 
 *}
-{[ for token in @ds.tokensByType("Color") ]}
+{[ for token in ds.tokensByType("Color") ]}
     {[ inject "rendered-token-var" context token /]}
     
 

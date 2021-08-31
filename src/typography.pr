@@ -6,10 +6,10 @@ and their value rendered using `rendered-color` blueprint
 
 *}
 
-{[ const allTokens = @ds.tokensByType("Typography") /]}
+{[ const allTokens = ds.tokensByType("Typography") /]}
 {[ for token in allTokens ]}
-{[ if @compare.null(token.referencedToken) ]}
-{[ inject "rendered-token-class" context @init.dictionary().add("token", token).add("allTokens", allTokens) /]}    
+{[ if !token.referencedToken ]}
+{[ inject "rendered-token-class" context { "token": token, "allTokens": allTokens } /]}    
 
 
 {[/]}
