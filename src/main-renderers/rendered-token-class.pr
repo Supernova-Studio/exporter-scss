@@ -29,7 +29,7 @@ Rendered as:
 {[ inject "rendered-description" context token /]}
 .{[ inject "rendered-name" context token /]} 
 
-{[ for alias in @js.findAliases(context.token, context.allTokens) ]}
+{[ for alias in findAliases(context.token, context.allTokens) ]}
 , {[ inject "rendered-description" context alias /]}
 .{[ inject "rendered-name" context alias /]}
 {[/]} {

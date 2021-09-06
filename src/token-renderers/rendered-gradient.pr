@@ -38,15 +38,15 @@ linear-gradient(
 *}
 {[ inject "reference-wrapper" context context ]}
 {[ let gradientType = "linear-gradient" /]}
-{[ let gradientDirection = @js.gradientAngle(context.from, context.to).rounded(2).toString().suffixed("deg") /]}
-{[ if @compare.equals(context.type, "Radial") ]}
+{[ let gradientDirection = gradientAngle(context.from, context.to).rounded(2).toString().suffixed("deg") /]}
+{[ if (context.type === "Radial") ]}
   {[ set "gradientType" = "radial-gradient" /]}
   {[ set "gradientDirection" = "circle at center" /]}
 {[/]}
 {{ gradientType }}(
   {{ gradientDirection }},
   {[ for stop in context.stops ]}
-{[ inject "rendered-color" context stop.color /]} {{ stop.position.multipliedBy(100).rounded(1) }}%{[ if @boolean.not(#last) ]}, {[/]}
+{[ inject "rendered-color" context stop.color /]} {{ (stop.position * 100).rounded(1) }}%{[ if !(#last) ]}, {[/]}
   
   {[/]}
 )

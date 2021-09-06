@@ -18,7 +18,7 @@ Note: Token is passed as `context` property because it is injected
 
 /* description */
 *}
-{[ if @compare.null(context.referencedToken) ]}
-{{#body}}
-{[else]}
+{[ if !context.referencedToken ]}
+{{ #body }}
+{[ else ]}
 ${[ inject "rendered-name" context context.referencedToken /]}{[/]}

@@ -53,18 +53,18 @@ Rendered as:
 *}
 
 {[ let fontStyle = "normal" /]}
-{[ if @ds.fonts.isItalic(context.font) ]}
+{[ if ds.isFontItalic(context.font) ]}
   {[ set fontStyle = "italic" /]}
 {[/]}
 font-family: "{{ context.font.family }}";
 font-style: {{ fontStyle }};
-font-weight: {{ @ds.fonts.weight(context.font) }};
+font-weight: {{ ds.fontWeight(context.font) }};
 font-size: {[ inject "rendered-measure" context context.fontSize /]};
-{[ if @compare.nonnull(context.lineHeight) ]}
+{[ if context.lineHeight ]}
 line-height: {[ inject "rendered-measure" context context.lineHeight /]};
 {[/]}
-letter-spacing: {[if @compare.equals(context.letterSpacing.unit, "Percent") ]} 
-{{ context.letterSpacing.measure.dividedBy(100).rounded(2) }}em;
+letter-spacing: {[ if (context.letterSpacing.unit === "Percent") ]} 
+{{ (context.letterSpacing.measure / 100).rounded(2) }}em;
 {[ else ]}
 {[ inject "rendered-measure" context context.letterSpacing /]};
 {[/]}

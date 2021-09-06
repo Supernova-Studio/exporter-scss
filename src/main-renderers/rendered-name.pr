@@ -24,7 +24,7 @@ Rendered as:
 [group1][group2][...][name];
 
 *}
-{[ let tokenGroup = @ds.tokenGroupContainingTokenId(context.id) /]}
+{[ let tokenGroup = ds.tokenGroupContainingTokenId(context.id) /]}
 {[ let prefix = "" /]}
 {[ switch context.tokenType ]}
 {[ case "Color" ]}{[ prefix = behavior.colorTokenPrefix /]}
@@ -35,5 +35,5 @@ Rendered as:
 {[ case "Gradient" ]}{[ prefix = behavior.gradientTokenPrefix /]}  
 {[ default ]}{[ prefix = "" /]}  
 {[/]}
-{[ let tokenName = @js.readableVariableName(context, tokenGroup, prefix) /]}
+{[ let tokenName = readableVariableName(context, tokenGroup, prefix) /]}
 {{ tokenName }}

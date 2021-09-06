@@ -27,7 +27,7 @@ Rendered as:
 
 *}
 {[ inject "reference-wrapper" context context ]}
-{[ if @compare.lessThan(context.a, 255) ]}
+{[ if (context.a < 255) ]}
 #{{ context.hex }}
 {[ else ]}
 #{{ context.hex.substring(0, 6) }}
