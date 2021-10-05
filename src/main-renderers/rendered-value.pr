@@ -24,6 +24,7 @@ Rendered as:
 [group1][group2][...][name];
 
 *}
+var(--{[ inject "rendered-name" context token.name /]},
 {[ let token = context /]}
 {[ switch context.tokenType ]}
 {[ case "Color" ]}{[ inject "rendered-color" context token.value /]}
@@ -33,3 +34,4 @@ Rendered as:
 {[ case "Measure" ]}{[ inject "rendered-measure" context token.value /]} 
 {[ case "Gradient" ]}{[ inject "rendered-gradient" context token.value /]} 
 {[/]}
+)
