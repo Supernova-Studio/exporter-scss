@@ -24,4 +24,4 @@ Rendered as:
 *}
 {[ let token = context /]}
 {[ inject "rendered-description" context token /]}
-${[ inject "rendered-name" context token /]}: var({[ inject "rendered-var" context token /]}, {[ inject "rendered-value" context token /]};
+${[ inject "rendered-name" context token /]}: var(--{[ inject "rendered-name" context token /]}, {[ inject "rendered-value" context token /]};
