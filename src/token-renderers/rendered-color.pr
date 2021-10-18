@@ -30,4 +30,3 @@ Rendered as:
 {[ let hslaOutput = RGBAtoHSLA(context.r, context.g, context.b, context.a) /]}
 #{{ hslaOutput }}
 {[/]}
-{[/]}
