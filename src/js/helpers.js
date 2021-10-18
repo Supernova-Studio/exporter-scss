@@ -69,11 +69,11 @@ Pulsar.registerPayload("behavior", {
 });
 
 function RGBAtoHSLA(r, g, b, a) {
-    const ratiodR = r/255;
-    const ratiodG = g/255;
-    const ratiodB = b/255;
+    var ratiodR = r/255;
+    var ratiodG = g/255;
+    var ratiodB = b/255;
 
-    let cmin = Math.min(ratiodR,ratiodG,ratiodB),
+    var cmin = Math.min(ratiodR,ratiodG,ratiodB),
         cmax = Math.max(ratiodR,ratiodG,ratiodB),
         delta = cmax - cmin,
         h;
@@ -93,13 +93,13 @@ function RGBAtoHSLA(r, g, b, a) {
 
     h = Math.round(h * 60);
 
-    const hue = h + (h < 0 ? 360 : 0);
+    var hue = h + (h < 0 ? 360 : 0);
 
-    const light = (cmax + cmin) / 2;
-    const lightness = (((cmax + cmin) / 2) * 100).toFixed(1);
-    const saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
+    var light = (cmax + cmin) / 2;
+    var lightness = (((cmax + cmin) / 2) * 100).toFixed(1);
+    var saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
 
     return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + a + ")";
 }
 
-Pulsar.registerFunction("RGBAtoHSLA", RGBAtoHSLA)
+Pulsar.registerFunction("RGBAtoHSLA", RGBAtoHSLA);
