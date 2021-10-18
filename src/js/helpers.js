@@ -68,7 +68,7 @@ Pulsar.registerPayload("behavior", {
   typographyTokenPrefix: "coral-Typography",
 });
 
-function RGBAtoHSLA(r, g, b, a) {
+function RGBAtoHSLA(r, g, b, a = 1) {
     var ratiodR = r/255;
     var ratiodG = g/255;
     var ratiodB = b/255;
