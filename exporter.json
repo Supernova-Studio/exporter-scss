@@ -1,9 +1,9 @@
 {
     "id": "io.supernova.scss",
-    "name": "SCSS",
+    "name": "SCSS fo Talend",
     "description": "SCSS token and style exporter",
-    "author": "Ivan Terpugov & Jiri Trecak",
-    "organization": "Supernova",
+    "author": "Talend and Ivan Terpugov & Jiri Trecak",
+    "organization": "Talend",
     "source_dir": "src",
     "version": "1.1",
     "config": {
