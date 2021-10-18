@@ -27,6 +27,6 @@ Rendered as:
 
 *}
 {[ inject "reference-wrapper" context context ]}
-{[ let hslaOutput = RGBAtoHSLA(context.r, context.g, context.b, context.a) /]}
-#{{ hslaOutput }}
+{[ let hslaOutput = rgbaToHsla(context.r, context.g, context.b, context.a) /]}
+{{ hslaOutput }}
 {[/]}

@@ -68,7 +68,7 @@ Pulsar.registerPayload("behavior", {
   typographyTokenPrefix: "coral-Typography",
 });
 
-function RGBAtoHSLA(r, g, b, a = 1) {
+Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
     var ratiodR = r/255;
     var ratiodG = g/255;
     var ratiodB = b/255;
@@ -100,6 +100,4 @@ function RGBAtoHSLA(r, g, b, a = 1) {
     var saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
 
     return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + a + ")";
-}
-
-Pulsar.registerFunction("RGBAtoHSLA", RGBAtoHSLA);
+});
