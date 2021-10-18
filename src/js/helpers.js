@@ -67,3 +67,38 @@ Pulsar.registerPayload("behavior", {
   shadowTokenPrefix: "coral-Shadow",
   typographyTokenPrefix: "coral-Typography",
 });
+
+function RGBAtoHSLA(r, g, b, a) {
+    const ratiodR = r/255;
+    const ratiodG = g/255;
+    const ratiodB = b/255;
+
+    let cmin = Math.min(ratiodR,ratiodG,ratiodB),
+        cmax = Math.max(ratiodR,ratiodG,ratiodB),
+        delta = cmax - cmin,
+        h;
+
+    if(delta === 0) {
+        h = 0;
+    }
+    else if(cmax === ratiodR) {
+        h = ((ratiodG - ratiodB) / delta) % 6;
+    }
+    else if(cmax === ratiodG) {
+        h = (ratiodB - ratiodR) / delta + 2;
+    }
+    else {
+        h = (ratiodR - ratiodG) / delta + 4;
+    }
+
+    h = Math.round(h * 60);
+
+    const hue = h + (h < 0 ? 360 : 0);
+
+    const light = (cmax + cmin) / 2;
+    const lightness = (((cmax + cmin) / 2) * 100).toFixed(1);
+    const saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
+
+    return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + a + ")";
+
+}

@@ -27,9 +27,7 @@ Rendered as:
 
 *}
 {[ inject "reference-wrapper" context context ]}
-{[ if (context.a < 255) ]}
-#{{ context.hex }}
-{[ else ]}
-#{{ context.hex.substring(0, 6) }}
+{[ let hslaOutput = RGBAtoHSLA(context.r, context.g, context.b, context.a) /]}
+#{{ hslaOutput }}
 {[/]}
 {[/]}
