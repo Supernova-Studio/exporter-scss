@@ -100,5 +100,6 @@ function RGBAtoHSLA(r, g, b, a) {
     const saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
 
     return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + a + ")";
-
 }
+
+Pulsar.registerFunction("RGBAtoHSLA", RGBAtoHSLA)
