@@ -20,10 +20,7 @@ Note: Value is passed as `context` property because it is injected
 }
 
 
-Rendered as:
-
-#rrggbb if it is fully opaque color
-#rrggbbaa if it is semi-transparent color
+Rendered as HSLA:
 
 *}
 {[ inject "reference-wrapper" context context ]}

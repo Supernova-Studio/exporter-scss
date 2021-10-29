@@ -69,35 +69,37 @@ Pulsar.registerPayload("behavior", {
 });
 
 Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
-    var ratiodR = r/255;
-    var ratiodG = g/255;
-    var ratiodB = b/255;
+  var ratiodR = r/255;
+  var ratiodG = g/255;
+  var ratiodB = b/255;
 
-    var cmin = Math.min(ratiodR,ratiodG,ratiodB),
-        cmax = Math.max(ratiodR,ratiodG,ratiodB),
-        delta = cmax - cmin,
-        h;
+  var cmin = Math.min(ratiodR,ratiodG,ratiodB),
+      cmax = Math.max(ratiodR,ratiodG,ratiodB),
+      delta = cmax - cmin,
+      h;
 
-    if(delta === 0) {
-        h = 0;
-    }
-    else if(cmax === ratiodR) {
-        h = ((ratiodG - ratiodB) / delta) % 6;
-    }
-    else if(cmax === ratiodG) {
-        h = (ratiodB - ratiodR) / delta + 2;
-    }
-    else {
-        h = (ratiodR - ratiodG) / delta + 4;
-    }
+  if(delta === 0) {
+      h = 0;
+  }
+  else if(cmax === ratiodR) {
+      h = ((ratiodG - ratiodB) / delta) % 6;
+  }
+  else if(cmax === ratiodG) {
+      h = (ratiodB - ratiodR) / delta + 2;
+  }
+  else {
+      h = (ratiodR - ratiodG) / delta + 4;
+  }
 
-    h = Math.round(h * 60);
+  h = Math.round(h * 60);
 
-    var hue = h + (h < 0 ? 360 : 0);
+  var hue = h + (h < 0 ? 360 : 0);
 
-    var light = (cmax + cmin) / 2;
-    var lightness = (((cmax + cmin) / 2) * 100).toFixed(1);
-    var saturation = ((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100).toFixed(1);
+  var light = (cmax + cmin) / 2;
+  var lightness = Math.round((((cmax + cmin) / 2) * 100));
+  var saturation = Math.round(((delta === 0 ? 0 : delta / (1 - Math.abs(2 * light - 1))) * 100));
 
-    return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + a + ")";
+  var alpha = Math.round((a / 255) * 10) / 10;
+
+  return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + alpha + ")";
 });
