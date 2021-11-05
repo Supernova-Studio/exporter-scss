@@ -51,21 +51,5 @@ Rendered as:
 [text]
 
 *}
-
-{[ let fontStyle = "normal" /]}
-{[ if ds.isFontItalic(context.font) ]}
-  {[ set fontStyle = "italic" /]}
-{[/]}
-font-family: "{{ context.font.family }}";
-font-style: {{ fontStyle }};
-font-weight: {{ ds.fontWeight(context.font) }};
-font-size: {[ inject "rendered-measure" context context.fontSize /]};
-{[ if context.lineHeight ]}
-line-height: {[ inject "rendered-measure" context context.lineHeight /]};
-{[/]}
-letter-spacing: {[ if (context.letterSpacing.unit === "Percent") ]} 
-{{ (context.letterSpacing.measure / 100).rounded(2) }}em;
-{[ else ]}
-{[ inject "rendered-measure" context context.letterSpacing /]};
-{[/]}
-text-indent: {[ inject "rendered-measure" context context.paragraphIndent /]};
+{[ inject "reference-wrapper" context context ]}
+{[ if ds.isFontItalic(context.font) ]}italic {[/]}{{ ds.fontWeight(context.font)  }} {{ pixelsToRem(context.fontSize) }}/{[ if context.lineHeight ]}{[ inject "rendered-measure" context context.lineHeight /]}{[ else ]}100%{[/]} '{{ context.font.family }}'{[/]}

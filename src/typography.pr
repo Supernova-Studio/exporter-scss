@@ -9,8 +9,7 @@ and their value rendered using `rendered-color` blueprint
 {[ const allTokens = ds.tokensByType("Typography") /]}
 {[ for token in allTokens ]}
 {[ if !token.referencedToken ]}
-{[ inject "rendered-token-class" context { "token": token, "allTokens": allTokens } /]}    
-
-
+    {[ inject "rendered-token-var" context token /]}
 {[/]}
+
 {[/]}

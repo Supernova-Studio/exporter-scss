@@ -49,5 +49,5 @@ Xpx Xpx Xpx [Rendered Color];
 
 *}
 {[ inject "reference-wrapper" context context ]}
-{[ inject "rendered-measure" context context.x /]} {[ inject "rendered-measure" context context.y /]} {[ inject "rendered-measure" context context.radius /]} {[ inject "rendered-measure" context context.spread /]} {[ inject "rendered-color" context context.color /]}
+{[ inject "rendered-measure" context context.x /]} {[ inject "rendered-measure" context context.y /]}{[ inject "rendered-measure" context context.radius /]}{[ inject "rendered-measure" context context.spread /]}{[ inject "rendered-color" context context.color /]}
 {[/]}

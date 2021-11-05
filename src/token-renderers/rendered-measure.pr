@@ -26,5 +26,9 @@ Note: Value is passed as `context` property because it is injected
 {[ case "Ems"]}
 {[ set unit = "em"/]}
 {[/]}
+{[ if unit === "px" ]}
+{{ pixelsToRem({ 'measure': context.measure }) }}
+{[ else ]}
 {{ context.measure }}{{ unit }}
+{[/]}
 {[/]}

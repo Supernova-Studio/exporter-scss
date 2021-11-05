@@ -62,10 +62,11 @@ Pulsar.registerFunction("gradientAngle", function(from, to) {
 Pulsar.registerPayload("behavior", {
   colorTokenPrefix: "coral-Color",
   borderTokenPrefix: "coral-Border",
-  gradientTokenPrefix: "coral-Gradient",
-  measureTokenPrefix: "coral-Measure",
-  shadowTokenPrefix: "coral-Shadow",
-  typographyTokenPrefix: "coral-Typography",
+  gradientTokenPrefix: "coral-Color",
+  measureTokenPrefix: "coral-",
+  shadowTokenPrefix: "coral-",
+  typographyTokenPrefix: "coral-",
+  radiusTokenPrefix: "coral-",
 });
 
 Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
@@ -102,4 +103,42 @@ Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
   var alpha = Math.round((a / 255) * 10) / 10;
 
   return "hsla(" + hue + "," + saturation + "%," + lightness + "%," + alpha + ")";
+});
+
+Pulsar.registerFunction("subFamilyToWeight", function (subfamily) {
+  const cleanSubFamily = subfamily.toLowerCase;
+  switch (cleanSubFamily) {
+    case "thin": 
+      return 100;
+	  case "extralight": 
+      return 200;
+	  case "light": 
+      return 300;
+	  case "normal": 
+      return 400;
+	  case "medium": 
+      return 500;
+	  case "semibold": 
+      return 600;
+	  case "bold": 
+      return 700;
+	  case "extrabold": 
+      return 800;
+	  case "black": 
+      return 900;
+    default: 
+      return 400;
+  }
+});
+
+Pulsar.registerFunction("pixelsToRem", function (value) {
+  return `${value['measure'] / 10}rem`;
+});
+
+Pulsar.registerFunction("logKeys", function (thing) {
+  console.log(`name : ${thing.name}`);
+  console.log(`test : ${thing.value.radius.measure}`);
+  for(const entry in thing.value.radius) {
+    console.log(entry);
+  }
 });
