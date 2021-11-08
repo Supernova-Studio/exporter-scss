@@ -33,4 +33,5 @@ Rendered as:
 {[ case "Measure" ]}{[ inject "rendered-measure" context token.value /]} 
 {[ case "Gradient" ]}{[ inject "rendered-gradient" context token.value /]} 
 {[ case "Radius" ]}{[ inject "rendered-radius" context token.value /]} 
+{[ case "Text" ]}{[ inject "rendered-text" context token.value /]} 
 {[/]}

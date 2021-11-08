@@ -34,6 +34,7 @@ Rendered as:
 {[ case "Measure" ]}{[ prefix = behavior.measureTokenPrefix /]}  
 {[ case "Gradient" ]}{[ prefix = behavior.gradientTokenPrefix /]}  
 {[ case "Radius" ]}{[ prefix = behavior.radiusTokenPrefix /]}  
+{[ case "Text" ]}{[ prefix = behavior.textTokenPrefix /]}  
 {[ default ]}{[ prefix = "" /]}  
 {[/]}
 {[ let tokenName = readableVariableName(context, tokenGroup, prefix) /]}

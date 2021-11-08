@@ -67,6 +67,7 @@ Pulsar.registerPayload("behavior", {
   shadowTokenPrefix: "coral-",
   typographyTokenPrefix: "coral-",
   radiusTokenPrefix: "coral-",
+  textTokenPrefix: "coral-",
 });
 
 Pulsar.registerFunction("rgbaToHsla", function (r, g, b, a = 1) {
@@ -135,10 +136,18 @@ Pulsar.registerFunction("pixelsToRem", function (value) {
   return `${value['measure'] / 10}rem`;
 });
 
-Pulsar.registerFunction("logKeys", function (thing) {
-  console.log(`name : ${thing.name}`);
-  console.log(`test : ${thing.value.radius.measure}`);
-  for(const entry in thing.value.radius) {
+Pulsar.registerFunction("logKeys", function (object) {
+  for(const entry in object) {
     console.log(entry);
   }
+});
+
+Pulsar.registerFunction("baseWrap", function (token) {
+  const stringPrefix = token.split(':')[0];
+  console.log(stringPrefix);
+  if(stringPrefix === 'data') {
+    return `url("${token}")`;
+  }
+
+  return token;
 });
