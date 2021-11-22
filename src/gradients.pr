@@ -5,7 +5,8 @@ Tokens are named by their group path and then name,
 and their value rendered using `gradient-color` blueprint
 
 *}
-{[ for token in ds.tokensByType("Gradient") ]}
+{[ let brand = ds.currentBrand() /]}
+{[ for token in ds.tokensByType("Gradient", brand.id) ]}
     {[ inject "rendered-token-var" context token /]}
     
 
