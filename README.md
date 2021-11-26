@@ -10,22 +10,19 @@ The SCSS Exporter exports a theme into SCSS variables. It runs for:
 - [x] Opacities
 - [x] Radii
 
-It outputs variables prefaced with `$coral` and contains references to CSS custom properties hydrated with CSS files extracted elsewhere.  
-
+It outputs variables prefaced with `$coral` and contains references to CSS custom properties hydrated with CSS files extracted elsewhere.
 
 ```scss
-$coralColorNeutralText: var(--coralColorNeutralText, hsla(0,0%,13%,1));
-$coralColorNeutralTextWeak: var(--coralColorNeutralTextWeak, hsla(0,0%,42%,1));
-$coralColorNeutralTextDisabled: var(--coralColorNeutralTextDisabled, hsla(0,0%,55%,1));
-$coralColorNeutralTextInverted: var(--coralColorNeutralTextInverted, hsla(0,0%,100%,1));
-$coralColorNeutralBackground: var(--coralColorNeutralBackground, hsla(0,0%,100%,1));
-$coralColorNeutralBackgroundMedium: var(--coralColorNeutralBackgroundMedium, hsla(0,0%,97%,1));
-$coralColorNeutralBackgroundStrong: var(--coralColorNeutralBackgroundStrong, hsla(0,0%,91%,1));
-$coralColorNeutralBackgroundDisabled: var(--coralColorNeutralBackgroundDisabled, hsla(0,0%,97%,1));
-$coralColorNeutralBorder: var(--coralColorNeutralBorder, hsla(0,0%,42%,1));
-$coralColorNeutralBorderWeak: var(--coralColorNeutralBorderWeak, hsla(0,0%,91%,1));
-$coralColorNeutralBorderHover: var(--coralColorNeutralBorderHover, hsla(0,0%,13%,1));
+$coral-color-neutral-text: var(--coral-color-neutral-text, hsla(0,0%,13%,1));
+$coral-color-neutral-text-weak: var(--coral-color-neutral-text-weak, hsla(0,0%,42%,1));
+$coral-color-neutral-text-disabled: var(--coral-color-neutral-text-disabled, hsla(0,0%,55%,1));
+$coral-color-neutral-text-inverted: var(--coral-color-neutral-text-inverted, hsla(0,0%,100%,1));
+$coral-color-neutral-background: var(--coral-color-neutral-background, hsla(0,0%,100%,1));
+$coral-color-neutral-background-medium: var(--coral-color-neutral-background-medium, hsla(0,0%,97%,1));
+$coral-color-neutral-background-strong: var(--coral-color-neutral-background-strong, hsla(0,0%,91%,1));
+$coral-color-neutral-background-disabled: var(--coral-color-neutral-background-disabled, hsla(0,0%,97%,1));
+$coral-color-neutral-border: var(--coral-color-neutral-border, hsla(0,0%,42%,1));
+$coral-color-neutral-border-weak: var(--coral-color-neutral-border-weak, hsla(0,0%,91%,1));
+$coral-color-neutral-border-hover: var(--coral-color-neutral-border-hover, hsla(0,0%,13%,1));
 ...
 ```
-
-
