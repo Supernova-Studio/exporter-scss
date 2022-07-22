@@ -15,3 +15,11 @@ and their value rendered using `rendered-color` blueprint
 
 {[/]}
 {[/]}
+
+{[ for token in allTokens ]}
+{[ if !token.referencedToken ]}
+{[ inject "rendered-token-mixin" context { "token": token, "allTokens": allTokens } /]}    
+
+
+{[/]}
+{[/]}
