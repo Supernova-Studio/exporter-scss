@@ -47,7 +47,6 @@ Note: Value is passed as `context` property because it is injected
 }
 
 *}
-
 {[ inject "reference-wrapper" context context ]}
 {[ let unit = "px" /]}
 {{ context.radius.measure }}{{ unit }}
