@@ -64,6 +64,7 @@ Pulsar.registerPayload("behavior", {
   borderTokenPrefix: "border",
   gradientTokenPrefix: "gradient",
   measureTokenPrefix: "measure",
+  radiiTokenPrefix: "radii",
   shadowTokenPrefix: "shadow",
   typographyTokenPrefix: "typography",
 });

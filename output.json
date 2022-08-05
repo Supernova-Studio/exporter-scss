@@ -25,6 +25,10 @@
             "write_to": "typography.scss"
         },
         {
+            "invoke": "radii.pr",
+            "write_to": "radii.scss"
+        },
+        {
             "invoke": "index-file.pr",
             "write_to": "index.scss"
         }
