@@ -67,3 +67,68 @@ Pulsar.registerPayload("behavior", {
   shadowTokenPrefix: "shadow",
   typographyTokenPrefix: "typography",
 });
+
+
+
+/** Describe complex shadow token */
+Pulsar.registerFunction("shadowDescription", function (shadowToken) {
+  
+  let connectedShadow = shadowToken.shadowLayers?.reverse().map((shadow) => {
+      return shadowTokenValue(shadow)
+  })
+  .join(", ")
+
+  return connectedShadow
+})
+
+/** Convert complex shadow value to CSS representation */
+function shadowTokenValue(shadowToken) {
+  var blurRadius = getValueWithCorrectUnit(nonNegativeValue(shadowToken.value.radius.measure));
+  var offsetX = getValueWithCorrectUnit(shadowToken.value.x.measure);
+  var offsetY = getValueWithCorrectUnit(shadowToken.value.y.measure);
+  var spreadRadius = getValueWithCorrectUnit(shadowToken.value.spread.measure);
+
+  return `${shadowToken.value.type === "Inner" ? "inset " : ""}${offsetX} ${offsetY} ${blurRadius} ${spreadRadius} ${getFormattedRGB(shadowToken.value.color)}`
+}
+
+
+function getValueWithCorrectUnit(value, unit, forceUnit) {
+  if (value === 0 && forceUnit !== true) {
+    return `${value}`
+  } else {
+    // todo: add support for other units (px, rem, em, etc.)
+    return `${value}px`
+  }
+}
+
+function nonNegativeValue(num) {
+  if (num <= 0) {
+    return 0
+  } else {
+    return num
+  }
+}
+
+/** Convert type to CSS unit */
+function measureTypeIntoReadableUnit(type) {
+  switch (type) {
+    case "Points":
+      return "pt"
+    case "Pixels":
+      return "px"
+    case "Percent":
+      return "%"
+    case "Ems":
+      return "em"
+  }
+}
+
+function getFormattedRGB(colorValue) {
+ 
+  if (colorValue.a === 0) {
+    return `rgb(${colorValue.r},${colorValue.g},${colorValue.b})`
+  } else {
+    const opacity = Math.round((colorValue.a/255) * 100) / 100;
+    return `rgba(${colorValue.r},${colorValue.g},${colorValue.b},${opacity})`
+  } 
+}
