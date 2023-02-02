@@ -4,20 +4,15 @@
  Pulsar.registerFunction(
   "readableVariableName",
   function (token, tokenGroup) {
-    // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
-    if (!tokenGroup.isRoot) {
-      segments.push(tokenGroup.name + '-')
-    }
-    segments.push(token.name + '-');
+    segments.push(tokenGroup.name);
+    segments.push(token.name);
 
-    // Create "sentence" separated by spaces so we can camelcase it all
-    let sentence = segments.join(" ");
-    sentence = sentence.toLowerCase();
-    // only allow letters, digits, underscore and hyphen
-    //sentence = sentence.replace(/[^a-zA-Z0-9_-]/g, '_')
+    let tokenName = segments.join("-");
 
-    return sentence;
+    tokenName = tokenName.replace(/[^a-zA-Z0-9_-]/g, '-');
+
+    return tokenName.toLowerCase();
   }
 );
 

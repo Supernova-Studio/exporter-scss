@@ -10,7 +10,6 @@
     },
     "author": "Supernova.io",
     "license": "MIT",
-    "dependencies": {},
     "devDependencies": {
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.9",
