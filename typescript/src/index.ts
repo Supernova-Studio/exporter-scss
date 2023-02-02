@@ -10,7 +10,7 @@
 
     let tokenName = segments.join("-");
 
-    tokenName = tokenName.replace(/[^a-zA-Z0-9_-]/g, '-');
+    tokenName = tokenName.replace(/[^a-zA-Z0-9_-]/g, '');
 
     return tokenName.toLowerCase();
   }
