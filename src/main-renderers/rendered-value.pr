@@ -30,6 +30,7 @@ Rendered as:
 {[ case "Typography" ]}{[ inject "rendered-typography" context token.value /]}
 {[ case "Shadow" ]}{[ inject "rendered-shadow" context token /]}
 {[ case "Border" ]}{[ inject "rendered-border" context token.value /]}
-{[ case "Measure" ]}{[ inject "rendered-measure" context token.value /]} 
+{[ case "Measure" ]}{[ inject "rendered-measure" context token /]} 
 {[ case "Gradient" ]}{[ inject "rendered-gradient" context token.value /]} 
+{[ case "Other" ]}{[ inject "rendered-other" context token.value /]} 
 {[/]}

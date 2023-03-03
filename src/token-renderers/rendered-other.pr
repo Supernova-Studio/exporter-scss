@@ -1,0 +1,3 @@
+{[ inject "reference-wrapper" context context ]}
+{{ context.value }}
+{[/]}

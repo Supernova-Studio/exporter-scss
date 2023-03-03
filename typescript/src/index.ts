@@ -1,3 +1,10 @@
+Pulsar.registerFunction(
+  "measureUnit",
+  function (token) {
+    
+  }
+)
+
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
@@ -15,7 +22,6 @@
     return tokenName.toLowerCase();
   }
 );
-
 
 function findAliases(token, allTokens){
   let aliases = allTokens.filter(t => t.value.referencedToken && t.value.referencedToken.id === token.id)

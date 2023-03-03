@@ -1,0 +1,13 @@
+{*
+
+Generate all measure tokens as named variables.
+Tokens are named by their group path and then name, 
+and their value rendered using `rendered-measure` blueprint
+
+*}
+{[ let brand = ds.currentBrand() /]}
+{[ for token in ds.tokensByType("Other", brand.id) ]}
+{[ inject "rendered-token-var" context token /]}
+    
+
+{[/]}

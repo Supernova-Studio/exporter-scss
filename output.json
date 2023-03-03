@@ -28,5 +28,6 @@
             "invoke": "index-file.pr",
             "write_to": "index.scss"
         }
+
     ]
 }
