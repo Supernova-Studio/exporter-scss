@@ -27,7 +27,6 @@ Rendered as:
 {[ let token = context /]}
 {[ switch context.tokenType ]}
 {[ case "Color" ]}{[ inject "rendered-color" context token.value /]}
-{[ case "Typography" ]}{[ inject "rendered-typography" context token.value /]}
 {[ case "Shadow" ]}{[ inject "rendered-shadow" context token /]}
 {[ case "Border" ]}{[ inject "rendered-border" context token.value /]}
 {[ case "Measure" ]}{[ inject "rendered-measure" context token /]} 
