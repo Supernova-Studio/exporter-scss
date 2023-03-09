@@ -3,3 +3,4 @@
 @import "borders";
 @import "gradients";
 @import "shadows";
+@import "text";

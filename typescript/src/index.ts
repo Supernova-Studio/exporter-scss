@@ -53,6 +53,7 @@ Pulsar.registerPayload("behavior", {
   measureTokenPrefix: "measure",
   shadowTokenPrefix: "shadow",
   typographyTokenPrefix: "typography",
+  textTokenPrefix: "text"
 });
 
 

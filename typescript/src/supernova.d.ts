@@ -26,7 +26,7 @@ declare global {
   //
   // Enums
   //
-  type TokenType = 'Color' | 'Typography' | 'Radius' | 'Font' | 'Measure' | 'Shadow' | 'Border' | 'Gradient' | 'Text' | 'Other'
+  type TokenType = 'Color' | 'Typography' | 'Radius' | 'Font' | 'Measure' | 'Shadow' | 'Border' | 'Gradient' | 'Text' 
   
   type SourceType = 'Supernova' | 'Figma'
 

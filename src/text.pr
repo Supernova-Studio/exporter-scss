@@ -6,7 +6,7 @@ and their value rendered using `rendered-measure` blueprint
 
 *}
 {[ let brand = ds.currentBrand() /]}
-{[ for token in ds.tokensByType("Other", brand.id) ]}
+{[ for token in ds.tokensByType("Text", brand.id) ]}
 {[ inject "rendered-token-var" context token /]}
     
 

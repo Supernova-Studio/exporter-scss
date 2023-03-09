@@ -25,6 +25,10 @@
             "write_to": "typography.scss"
         },
         {
+            "invoke": "text.pr",
+            "write_to": "text.scss"
+        },
+        {
             "invoke": "index-file.pr",
             "write_to": "index.scss"
         }
