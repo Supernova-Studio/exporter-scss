@@ -21,12 +21,8 @@
             "write_to": "shadows.scss"
         },
         {
-            "invoke": "typography.pr",
-            "write_to": "typography.scss"
-        },
-        {
             "invoke": "text.pr",
-            "write_to": "text.scss"
+            "write_to": "strings.scss"
         },
         {
             "invoke": "index-file.pr",

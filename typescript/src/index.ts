@@ -1,10 +1,3 @@
-Pulsar.registerFunction(
-  "measureUnit",
-  function (token) {
-    
-  }
-)
-
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
