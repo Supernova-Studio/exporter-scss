@@ -3,4 +3,5 @@
 @import "borders";
 @import "gradients";
 @import "shadows";
-@import "text";
+@import "strings";
+@import "typography";
