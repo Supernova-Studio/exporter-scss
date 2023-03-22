@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "outDir": "build",
-    "module": "commonjs",
+    "module": "ES2015",
     "moduleResolution": "node",
     "strictNullChecks": true,
     "typeRoots": [
