@@ -7,6 +7,7 @@
 {[ case "012bbecc-e1bf-45b9-b64a-098b2088917c" ]}{[ tokenUnit = "" /]}
 {[ case "5f64ed08-8420-45a8-bbff-05a53e971c8f" ]}{[ tokenUnit = "em" /]}
 {[ case "b2dc092e-d140-48b0-97c2-2b5e8b7e18c1" ]}{[ tokenUnit = "%" /]}
+{[ case "2074af76-6d13-43aa-9713-1e796b0a1b76" ]}{[ tokenUnit = "s" /]}
 {[/]}
 {{ tokenMeasure }}{{ tokenUnit }}
 {[/]}
