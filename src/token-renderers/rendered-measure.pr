@@ -3,11 +3,11 @@
 {[ let unitId = context.propertyValues["tokenUnit"] /]}
 {[ let tokenUnit = "px" /]}
 {[ switch unitId ]}
-{[ case "4af0c343-2012-4d49-85b0-306d0aed89c2" ]}{[ tokenUnit = "px" /]}
-{[ case "012bbecc-e1bf-45b9-b64a-098b2088917c" ]}{[ tokenUnit = "" /]}
-{[ case "5f64ed08-8420-45a8-bbff-05a53e971c8f" ]}{[ tokenUnit = "em" /]}
-{[ case "b2dc092e-d140-48b0-97c2-2b5e8b7e18c1" ]}{[ tokenUnit = "%" /]}
-{[ case "2074af76-6d13-43aa-9713-1e796b0a1b76" ]}{[ tokenUnit = "s" /]}
+{[ case "f973a87d-3624-4b9f-b703-1f6df37f5b35" ]}{[ tokenUnit = "px" /]}
+{[ case "f50cba06-7b84-4dca-8e32-89b6c051d850" ]}{[ tokenUnit = "" /]}
+{[ case "e453a56a-ab62-47ad-b7dc-b52c32fdd5a9" ]}{[ tokenUnit = "em" /]}
+{[ case "5c5e3a43-5641-4df2-b94a-ccc7e94577e1" ]}{[ tokenUnit = "%" /]}
+{[ case "d9db0336-aadc-4afa-88d0-7e7ba71ceaf6" ]}{[ tokenUnit = "s" /]}
 {[/]}
 {{ tokenMeasure }}{{ tokenUnit }}
 {[/]}

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "target": "es6",
     "outDir": "build",
     "module": "ES2015",

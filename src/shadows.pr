@@ -8,7 +8,8 @@ and their value rendered using `shadow-color` blueprint
 {[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Shadow", brand.id) ]}
 {[ if (!token.isVirtual) ]}
-{[ inject "rendered-token-var" context token /]}  
+{[ inject "rendered-token-var" context token /]}
+
 
 {[/]}
 {[/]}

@@ -43,11 +43,4 @@ linear-gradient(
   {[ set "gradientType" = "radial-gradient" /]}
   {[ set "gradientDirection" = "circle at center" /]}
 {[/]}
-{{ gradientType }}(
-  {{ gradientDirection }},
-  {[ for stop in context.stops ]}
-{[ inject "rendered-color" context stop.color /]} {{ (stop.position * 100).rounded(1) }}%{[ if !(#last) ]}, {[/]}
-  
-  {[/]}
-)
-{[/]}
+{{ gradientType }}({{ gradientDirection }},{[ for stop in context.stops ]}{[ inject "rendered-color" context stop.color /]} {{ (stop.position * 100).rounded(1) }}%{[ if !(#last) ]},{[/]}{[/]}){[/]}

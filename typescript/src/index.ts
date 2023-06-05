@@ -1,3 +1,12 @@
+import shortenCssHex from 'shorten-css-hex';
+
+function shortenHex(hexValue) {
+  const shortenedHex = shortenCssHex('#' + hexValue);
+  return shortenedHex;
+}
+
+Pulsar.registerFunction("shortenHex", shortenHex);
+
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
@@ -10,6 +19,7 @@
 
     let tokenName = segments.join("-");
 
+    tokenName = tokenName.replace('+', '');
     tokenName = tokenName.replace(/[^a-zA-Z0-9_-]/g, '-');
 
     return tokenName.toLowerCase();
