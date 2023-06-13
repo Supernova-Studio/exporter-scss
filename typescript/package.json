@@ -11,6 +11,7 @@
     "author": "Supernova.io",
     "license": "MIT",
     "devDependencies": {
+        "@types/node": "^20.3.1",
         "@types/shorten-css-hex": "^1.1.0",
         "ts-loader": "^7.0.5",
         "typescript": "^3.9.9",

@@ -31,5 +31,5 @@ Rendered as:
 {[ case "Border" ]}{[ inject "rendered-border" context token.value /]}
 {[ case "Measure" ]}{[ inject "rendered-measure" context token /]}
 {[ case "Text" ]}{[ inject "rendered-string" context token /]}
-{[ case "Gradient" ]}{[ inject "rendered-gradient" context token.value /]}  
+{[ case "Gradient" ]}{[ inject "rendered-gradient" context token.value /]}
 {[/]}
