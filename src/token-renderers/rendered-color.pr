@@ -28,7 +28,7 @@ Rendered as:
 *}
 {[ inject "reference-wrapper" context context ]}
 {[ let tokenHex = context.hex /]}
-{[ if context.a < 255 ]}
+{[ if context.a.equals(255) ]}
 {[ tokenHex = tokenHex.substring(0, 6) /]}
 {[/]}
 {{ shortenHex(tokenHex) }}
