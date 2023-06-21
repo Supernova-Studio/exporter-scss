@@ -1,4 +1,5 @@
 import shortenCssHex from 'shorten-css-hex';
+import hexToRgba from 'hex-to-rgba';
 
 function shortenHex(hexValue) {
   const shortenedHex = shortenCssHex('#' + hexValue);
@@ -6,6 +7,13 @@ function shortenHex(hexValue) {
 }
 
 Pulsar.registerFunction("shortenHex", shortenHex);
+
+function toRgba(hexValue){
+  const convertedHex = hexToRgba('#' + hexValue);
+  return convertedHex;
+}
+
+Pulsar.registerFunction("toRgba", toRgba);
 
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
