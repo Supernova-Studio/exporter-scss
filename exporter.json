@@ -1,24 +1,16 @@
 {
-    "id": "io.supernova.scss",
-    "name": "SCSS",
-    "description": "SCSS token and style exporter",
-    "author": "Ivan Terpugov & Jiri Trecak",
-    "organization": "Supernova",
-    "source_dir": "src",
-    "version": "1.3",
-    "config": {
-        "sources": "sources.json",
-        "output": "output.json",
-        "js": "src/js/helpers.js"
-    },
+    "id": "cbs.exporter-scss",
+    "name": "[PLATFORM] Exporter",
+    "description": "Export your design system data into SCSS",
+    "author": "Andrew Still",
+    "organization": "CBS Sports",
+    "homepage": "[COMPANY_WEBSITE or delete]",
+    "version": "1.0.0",
     "usesBrands": true,
-    "engines": {
-        "pulsar": "1.0.0",
-        "supernova": "1.0.0"
-    },
+    "usesThemes": true,
+    "executable": "/dist/build.js",
+    "engine": "latest",
     "tags": [
-        "SCSS",
-        "Tokens",
-        "Styles"
+        "[ANYTHING_YOU_WANT, like 'Tokens', 'Assets' etc.]"
     ]
 }

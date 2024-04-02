@@ -1,8 +1,8 @@
-# Changelog
+### Release Notes
+All the updates to this exporter are documented in this file.
 
-All notable changes to this exporter are mentioned here in this file.
+## 1.0.0
 
-## [1.3] 
-### Multi-shadow SCSS variables
+### 🚀 New
 
-- SCSS exporter will now properly generate multi-layer shadows from the core definitions
+This is the first release of this exporter!

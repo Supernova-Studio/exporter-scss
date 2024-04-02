@@ -1,0 +1,26 @@
+{
+    "name": "@cbs/web",
+    "version": "1.0.0",
+    "description": "CBS Web Exporter",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npx webpack --mode=development --watch",
+        "build": "npx webpack --mode=production"
+    },
+    "author": "[AUTHOR_NAME]",
+    "license": "MIT",
+    "dependencies": {
+        "@supernovaio/export-helpers": "^1.0.8",
+        "@supernovaio/sdk-exporters": "latest",
+        "@types/shorten-css-hex": "^1.1.2",
+        "shorten-css-hex": "^1.1.0"
+    },
+    "devDependencies": {
+        "prettier": "3.0.3",
+        "terser-webpack-plugin": "5.3.9",
+        "ts-loader": "^7.0.5",
+        "typescript": "^5.2.2",
+        "webpack": "5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
+}
