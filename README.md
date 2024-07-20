@@ -10,6 +10,7 @@ The SCSS Exporter allows you to **produce production-ready code for all product 
 - [x] Color definitions
 - [x] Text Styles
 - [x] Gradients
+- [ ] Radii
 - [x] Shadows
 - [x] Borders
 
@@ -22,11 +23,13 @@ Once you have run the exporter against your design system, you can start using t
 
 ### [Example 1]
 
-Import `index.scss` file to your project and use generated styles
+Include `index.scss` file to your project scss file and use generated styles
 
 ```
+@use '../path/to/generated/index.scss' as Design;
+
 .yourClass {
-    color: $yourToken;
+    color: Design.$yourToken;
 }
 ```
 
