@@ -1,12 +1,15 @@
 {*
 
 Generate all shadow tokens as named variables.
-Tokens are named by their group path and then name, 
+Tokens are named by their group path and then name,
 and their value rendered using `shadow-color` blueprint
 
 *}
+{[ global CURRENT_TYPE = "Shadow" /]}
+@use './colors' as Color;
+@use './measures' as Measure;
 {[ let brand = ds.currentBrand() /]}
-{[ for token in ds.tokensByType("Shadow", brand.id) ]}
+{[ for token in ds.tokensByType(CURRENT_TYPE, brand.id) ]}
 {[ if (!token.isVirtual) ]}
 {[ inject "rendered-token-var" context token /]}  
 

@@ -1,12 +1,15 @@
 {*
 
 Generate all gradient tokens as named variables.
-Tokens are named by their group path and then name, 
+Tokens are named by their group path and then name,
 and their value rendered using `gradient-color` blueprint
 
 *}
+{[ global CURRENT_TYPE = "Gradient" /]}
+@use './colors' as Color;
+@use './measures' as Measure;
 {[ let brand = ds.currentBrand() /]}
-{[ for token in ds.tokensByType("Gradient", brand.id) ]}
+{[ for token in ds.tokensByType(CURRENT_TYPE, brand.id) ]}
 {[ inject "rendered-token-var" context token /]}
     
 
