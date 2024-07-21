@@ -5,9 +5,10 @@ Tokens are named by their group path and then name,
 and their value rendered using `rendered-color` blueprint
 
 *}
-
+{[ global CURRENT_TYPE = "Typography" /]}
+@use './measures' as Measure;
 {[ let brand = ds.currentBrand() /]}
-{[ const allTokens = ds.tokensByType("Typography", brand.id) /]}
+{[ const allTokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
 {[ for token in allTokens ]}
 {[ if !token.referencedToken ]}
 {[ inject "rendered-token-class" context { "token": token, "allTokens": allTokens } /]}    

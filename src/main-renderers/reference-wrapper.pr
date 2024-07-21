@@ -21,4 +21,6 @@ Note: Token is passed as `context` property because it is injected
 {[ if !context.referencedToken ]}
 {{ #body }}
 {[ else ]}
+{[ if (context.referencedToken.tokenType !== CURRENT_TYPE) ]}
+{{ context.referencedToken.tokenType }}.{[/]}
 ${[ inject "rendered-name" context context.referencedToken /]}{[/]}
