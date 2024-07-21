@@ -1,6 +1,6 @@
-@forward "colors";
-@forward "measures";
-@forward "borders";
-@forward "gradients";
-@forward "shadows";
-@forward "typography";
+@forward "./colors";
+@forward "./measures";
+@forward "./borders";
+@forward "./gradients";
+@forward "./shadows";
+@forward "./typography";
