@@ -9,7 +9,9 @@ Pulsar.registerFunction(
     if (!tokenGroup.isRoot && !tokenGroup.isNonVirtualRoot) {
       segments.push(tokenGroup.name);
     }
-    segments.push(...(token.name.match(/([A-Z]?[a-z]+|[A-Z]+)/g) ?? []));
+    
+    // Split the token name into words
+    segments.push(...(token.name.match(/([A-Z]?[a-z]+|\d+|[A-Z]+(?![a-z]))/g) || []));
 
     if (prefix && prefix.length > 0) {
       segments.unshift(prefix);
