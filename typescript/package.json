@@ -1,6 +1,6 @@
 {
     "name": "supernova-exporter-css-like",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Javascript computation for css-like exporters.",
     "main": "index.js",
     "scripts": {
