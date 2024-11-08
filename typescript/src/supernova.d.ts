@@ -193,6 +193,7 @@ declare global {
     childrenIds: Array<string>
     tokenIds: Array<string>
     parent: TokenGroup | null
+    isNonVirtualRoot: boolean;    
   }
 
   //

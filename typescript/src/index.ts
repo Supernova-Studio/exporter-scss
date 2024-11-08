@@ -3,20 +3,28 @@
  */
 Pulsar.registerFunction(
   "readableVariableName",
-  function (token, tokenGroup, prefix) {
+  function (token: Token, tokenGroup: TokenGroup, prefix: string) {
     // Create array with all path segments and token name at the end
-    const segments = [...tokenGroup.path];
-    if (!tokenGroup.isRoot && !tokenGroup.isNonVirtualRoot) {
-      segments.push(tokenGroup.name);
-    }
-    segments.push(token.name);
+    const nameSegments: string[] = [];
 
+    // Start path of the group
+    tokenGroup.path.forEach(s => nameSegments.push(...splitIntoWords(s)));
+
+    // Append name of the group
+    if (!tokenGroup.isRoot && !tokenGroup.isNonVirtualRoot) {
+      nameSegments.push(...splitIntoWords(tokenGroup.name));
+    }
+    
+    // Split the token name into words
+    nameSegments.push(...splitIntoWords(token.name));
+
+    // Add prefix if provided from external configuration
     if (prefix && prefix.length > 0) {
-      segments.unshift(prefix);
+      nameSegments.unshift(prefix);
     }
 
     // Create "sentence" separated by spaces so we can camelcase it all
-    let sentence = segments.join(" ");
+    let sentence = nameSegments.join(" ");
 
     // camelcase string from all segments
     sentence = sentence
@@ -34,6 +42,10 @@ Pulsar.registerFunction(
     return sentence;
   }
 );
+
+function splitIntoWords(string: string): string[] {
+  return string.match(/([A-Z]?[a-z]+|\d+|[A-Z]+(?![a-z]))/g) || []
+}
 
 function findAliases(token, allTokens) {
   let aliases = allTokens.filter(
