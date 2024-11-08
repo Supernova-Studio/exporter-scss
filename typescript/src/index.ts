@@ -3,13 +3,13 @@
  */
 Pulsar.registerFunction(
   "readableVariableName",
-  function (token, tokenGroup, prefix) {
+  function (token: Token, tokenGroup: TokenGroup, prefix: string) {
     // Create array with all path segments and token name at the end
     const segments = [...tokenGroup.path];
     if (!tokenGroup.isRoot && !tokenGroup.isNonVirtualRoot) {
       segments.push(tokenGroup.name);
     }
-    segments.push(token.name);
+    segments.push(...(token.name.match(/([A-Z]?[a-z]+|[A-Z]+)/g) ?? []));
 
     if (prefix && prefix.length > 0) {
       segments.unshift(prefix);
